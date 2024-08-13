@@ -4,7 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100vh; /* Changed from 100vw to 100vh */ 
+    margin: 0;
 }
 
 .card {
@@ -12,18 +13,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50%;
     background-color: white;
-    padding: .8rem;
-    border-radius: 1rem;
-    width: 18%;
-    padding-bottom: 2rem;
+    padding: 1rem; /* Changed from .8vw to 1rem */
+    border-radius: 1rem; /* Changed from 1vw to 1rem */
+    width: 90%; /* Adjusted to be more flexible */
+    max-width: 300px; /* Added max-width for larger screens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
 }
 
 .card img {
     width: 100%;
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
 }
 
 .container {
@@ -35,22 +37,40 @@ body {
 }
 
 .container h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Adjusted from 1.4vw to 1.2rem */
     color: hsl(212, 27%, 19%);
     text-align: center;
-    margin-top: 1.4rem;
-    margin-bottom: .1rem;
+    margin-top: 1rem; /* Adjusted from 1.4vw to 1rem */
+    margin-bottom: 0.5rem; /* Adjusted from .1vw to 0.5rem */
 }
 
 .container p {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjusted from 1vw to 1rem */
     color: hsl(213, 9%, 39%);
     text-align: center;
 }
 
 .attribution {
     position: fixed;
-    bottom: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    bottom: 0.5rem; /* Adjusted from 0.5vw to 0.5rem */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.8rem; /* Added for consistent font size */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 600px) {
+    .card {
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .container h4 {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+    }
 }
